@@ -45,7 +45,6 @@ body {
 .container {
     display: flex;
     flex: 1;
-    flex-wrap: wrap; /* Añadido para que el contenido fluya en pantallas pequeñas */
 }
 
 /* Menú de opciones lateral */
@@ -85,7 +84,6 @@ body {
     background-color: white;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Añadido para que el contenido fluya en pantallas pequeñas */
 }
 
 /* Contenedor de semestres ocultos */
@@ -187,60 +185,4 @@ iframe {
     font-size: 15px;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(44, 44, 44, 0.5);
-}
-
-/* @media queries para diseño responsivo */
-@media (max-width: 768px) {
-    .header-centro-estudios {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    .options {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .content {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .semestre-button, .creditos-button {
-        width: 100%; /* Hacer los botones más anchos en pantallas pequeñas */
-        font-size: 16px;
-    }
-
-    .semester-buttons button {
-        width: 90%; /* Hacer los botones más anchos */
-        font-size: 14px;
-    }
-
-    #FooterContainer {
-        width: 100%;
-        padding: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-centro-estudios {
-        font-size: 16px;
-    }
-
-    .options {
-        width: 100%;
-        padding: 8px;
-    }
-
-    .content {
-        padding: 15px;
-    }
-
-    .semestre-button, .creditos-button {
-        font-size: 14px;
-    }
-
-    .semester-buttons button {
-        font-size: 12px;
-    }
 }
