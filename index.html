@@ -38,14 +38,14 @@
                  FECHA DE FINALIZACIÓN 26/03/2025 
                  ARCHIVOS TOTALES: 23
             -->
-                 
-            <button class="creditos-button" onclick="mostrarCreditos()">Mostrar créditos</button>
-            <!-- Nuevo botón de información adicional -->
+                 <!-- Botón de quejas y sugerencias -->
+            <button class="creditos-button" onclick="window.location.href='mailto:emiliocolormexico@gmail.com'">Quejas y sugerencias</button>
+            <!-- Botón de información adicional -->
             <button class="creditos-button" onclick="mostrarInformacionAdicional()">Información adicional</button>
         </div>
 
         <div class="content" id="content">
-            <!-- Aquí se mostrará el contenedor del semestre seleccionado -->
+            <!--Contenedor del semestre seleccionado -->
             <div id="semester-container" class="semester-container"></div>
             <!-- Contenedor para mostrar la información -->
             <div id="info-container" class="info-container"></div>
@@ -81,7 +81,7 @@
             container.innerHTML = ''; // Limpiar contenido anterior
             infoContainer.innerHTML = ''; // Limpiar información anterior
 
-            // Crear un contenedor para los botones
+            //  Contenedor para los botones
             const buttonsContainer = document.createElement('div');
             buttonsContainer.className = 'semester-buttons';
 
@@ -150,7 +150,7 @@
 
             // Verificar si el semestre tiene materias definidas
             if (materiasPorSemestre[semestre]) {
-                // Crear botones con los nombres de las materias formateados
+                // Botones con los nombres de las materias formateados
                 materiasPorSemestre[semestre].forEach((materia, index) => {
                     const button = document.createElement('button');
                     button.innerText = formatearNombreMateria(materia); // Formatear el nombre
@@ -375,7 +375,7 @@
             infoContainer.style.display = 'block'; // Mostrar el contenedor de información
         }
 
-        // Llamar a la función al cargar la página
+        // Llamada a la función al cargar la página :)
         window.onload = mostrarInicio;
     </script>
 </body>
