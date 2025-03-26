@@ -1,0 +1,212 @@
+/* Estilos generales del body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #e0f7fa;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Encabezado central con logos y texto - Actualizado */
+.header-centro-estudios {
+    background-color: #DDDDE2; /* Mismo color que el footer */
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #700000; /* Color rojo oscuro/maroon */
+    font-weight: bold;
+    border-bottom: 2px solid #D0D0D4; /* Mismo estilo que el footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-shadow: 1px 1px 2px rgba(34, 34, 34, 0.5); /* Sombra */
+
+}
+
+.header-centro-estudios img {
+    height: 80px;
+    margin: 0 20px;
+}
+
+/* Encabezado de horarios */
+.header-horarios {
+    background-color: #800000;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+/* Contenedor principal flex */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Menú de opciones lateral */
+.options {
+    width: 200px;
+    background-color: white;
+    padding: 15px;
+    border-right: 2px solid #800000;
+}
+
+/* Botones de semestres rectangulares */
+.semestre-button {
+    display: block;
+    width: 180px;
+    height: 50px;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #800000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    transition: filter 0.1s ease;
+    border-radius: 0;
+    white-space: nowrap;
+}
+
+.semestre-button:hover {
+    filter: brightness(1.2);
+}
+
+/* Botón de créditos */
+.creditos-button {
+    display: block;
+    width: 180px;
+    height: 50px;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: #666;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    transition: filter 0.1s ease;
+    border-radius: 0;
+    white-space: nowrap;
+}
+
+.creditos-button:hover {
+    filter: brightness(1.2);
+}
+
+/* Contenido principal flex */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    gap: 20px;
+}
+
+/* Contenedor de semestres ocultos */
+.semester-container {
+    display: none;
+    flex-direction: column;
+    width: 140px;
+    background-color: white;
+    padding: 15px;
+    border-right: 2px solid #800000;
+}
+
+/* Botones de semestres */
+.semester-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.semester-buttons button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    transition: filter 0.1s ease;
+    border-radius: 0;
+    width: 100px;
+    height: 100px;
+    white-space: nowrap;
+}
+
+.semester-buttons button:hover {
+    filter: brightness(1.2);
+}
+
+/* Botón de cerrar */
+.close-button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    transition: filter 0.1s ease;
+    border-radius: 0;
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    white-space: nowrap;
+}
+
+.close-button:hover {
+    filter: brightness(1.2);
+}
+
+/* Contenedor de información oculto */
+.info-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    display: none;
+}
+
+/* Estilos para iframes */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Pie de página */
+#footer {
+    background-color: #DDDDE2;
+    margin: auto 0;
+    width: 100%;
+    height: 200px;
+    color: white;
+    text-align: center;
+    border-top-style: solid;
+    border-top-color: #D0D0D4;
+    border-top-width: thick;
+}
+
+#FooterContainer {
+    width: 880px;
+    margin: 0 auto;
+    height: 110px;
+    color: #78668C;
+    padding-top: 40px;
+}
+
+#FooterContainer span {
+    color: #700000;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(44, 44, 44, 0.5); /* Sombra */
+
+}
