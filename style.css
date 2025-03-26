@@ -11,21 +11,20 @@ body {
     font-weight: bold;
 }
 
-/* Encabezado central con logos y texto - Actualizado */
+/* Encabezado central con logos y texto */
 .header-centro-estudios {
-    background-color: #DDDDE2; /* Mismo color que el footer */
+    background-color: #DDDDE2;
     padding: 20px;
     text-align: center;
     font-size: 24px;
-    color: #700000; /* Color rojo oscuro/maroon */
+    color: #700000;
     font-weight: bold;
-    border-bottom: 2px solid #D0D0D4; /* Mismo estilo que el footer */
+    border-bottom: 2px solid #D0D0D4;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    text-shadow: 1px 1px 2px rgba(34, 34, 34, 0.5); /* Sombra */
-
+    text-shadow: 1px 1px 2px rgba(34, 34, 34, 0.5);
 }
 
 .header-centro-estudios img {
@@ -46,6 +45,7 @@ body {
 .container {
     display: flex;
     flex: 1;
+    flex-wrap: wrap; /* Añadido para que el contenido fluya en pantallas pequeñas */
 }
 
 /* Menú de opciones lateral */
@@ -57,7 +57,7 @@ body {
 }
 
 /* Botones de semestres rectangulares */
-.semestre-button {
+.semestre-button, .creditos-button {
     display: block;
     width: 180px;
     height: 50px;
@@ -74,29 +74,7 @@ body {
     white-space: nowrap;
 }
 
-.semestre-button:hover {
-    filter: brightness(1.2);
-}
-
-/* Botón de créditos */
-.creditos-button {
-    display: block;
-    width: 180px;
-    height: 50px;
-    padding: 8px;
-    margin-bottom: 10px;
-    background-color: #666;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-size: 14px;
-    transition: filter 0.1s ease;
-    border-radius: 0;
-    white-space: nowrap;
-}
-
-.creditos-button:hover {
+.semestre-button:hover, .creditos-button:hover {
     filter: brightness(1.2);
 }
 
@@ -107,6 +85,7 @@ body {
     background-color: white;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Añadido para que el contenido fluya en pantallas pequeñas */
 }
 
 /* Contenedor de semestres ocultos */
@@ -207,6 +186,61 @@ iframe {
     color: #700000;
     font-size: 15px;
     font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(44, 44, 44, 0.5); /* Sombra */
+    text-shadow: 1px 1px 2px rgba(44, 44, 44, 0.5);
+}
 
+/* @media queries para diseño responsivo */
+@media (max-width: 768px) {
+    .header-centro-estudios {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .options {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .semestre-button, .creditos-button {
+        width: 100%; /* Hacer los botones más anchos en pantallas pequeñas */
+        font-size: 16px;
+    }
+
+    .semester-buttons button {
+        width: 90%; /* Hacer los botones más anchos */
+        font-size: 14px;
+    }
+
+    #FooterContainer {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-centro-estudios {
+        font-size: 16px;
+    }
+
+    .options {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .semestre-button, .creditos-button {
+        font-size: 14px;
+    }
+
+    .semester-buttons button {
+        font-size: 12px;
+    }
 }
