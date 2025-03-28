@@ -29,23 +29,21 @@
             <button class="semestre-button" onclick="mostrarSemestre(5)">QUINTO SEMESTRE</button>
             <button class="semestre-button" onclick="mostrarSemestre(6)">SEXTO SEMESTRE</button>
             <button class="semestre-button" onclick="mostrarSemestre(0)">ASESORÍA EN GRUPO</button>
-            <!-- Nuevo botón de créditos -->
-
             <!-- 
                  DESARRROLLADO POR EMILIO CALEP VARGAS YÁÑEZ
                  INSTITUCIÓN: CECYT 9 - CUARTO SEMESTRE 
-                 FECHA DE INICIO:      24/03/2025
-                 FECHA DE FINALIZACIÓN 26/03/2025 
+                 FECHA DE INICIO:       24/03/2025
+                 FECHA DE FINALIZACIÓN: 26/03/2025 
                  ARCHIVOS TOTALES: 23
             -->
-                 <!-- Botón de quejas y sugerencias -->
-            <button class="creditos-button" onclick="window.location.href='mailto:emiliocolormexico@gmail.com'">Solicitud para cambio<br>de información</button>
-            <!-- Botón de información adicional -->
+                 
+            <button class="creditos-button" onclick="mostrarCreditos()">Mostrar créditos</button>
+            <!-- Nuevo botón de información adicional -->
             <button class="creditos-button" onclick="mostrarInformacionAdicional()">Información adicional</button>
         </div>
 
         <div class="content" id="content">
-            <!--Contenedor del semestre seleccionado -->
+            <!-- Aquí se mostrará el contenedor del semestre seleccionado -->
             <div id="semester-container" class="semester-container"></div>
             <!-- Contenedor para mostrar la información -->
             <div id="info-container" class="info-container"></div>
@@ -81,7 +79,7 @@
             container.innerHTML = ''; // Limpiar contenido anterior
             infoContainer.innerHTML = ''; // Limpiar información anterior
 
-            //  Contenedor para los botones
+            // Crear un contenedor para los botones
             const buttonsContainer = document.createElement('div');
             buttonsContainer.className = 'semester-buttons';
 
@@ -150,7 +148,7 @@
 
             // Verificar si el semestre tiene materias definidas
             if (materiasPorSemestre[semestre]) {
-                // Botones con los nombres de las materias formateados
+                // Crear botones con los nombres de las materias formateados
                 materiasPorSemestre[semestre].forEach((materia, index) => {
                     const button = document.createElement('button');
                     button.innerText = formatearNombreMateria(materia); // Formatear el nombre
@@ -192,15 +190,15 @@
                             infoContainer.innerHTML = `<iframe src="archivo_tabla_3S_QUIMICA_I.html"></iframe>`;                        
                         } 
                         else if (materia === "GEOMETRÍA \nANALÍTICA") {
-                            // QUIMICA I
+                            // ANALITICA
                             infoContainer.innerHTML = `<iframe src="archivo_tabla_3S_ANALITICA.html"></iframe>`;                        
                         } 
                         else if (materia === "CÁLCULO \nDIFERENCIAL") {
-                            // QUIMICA I
+                            // CALCULO DIFERENCIAL
                             infoContainer.innerHTML = `<iframe src="archivo_tabla_4S_CALCULO.html"></iframe>`;                        
                         } 
                         else if (materia === "DIBUJO\n TÉCNICO I") {
-                            // DIBUJO TÉCNICO II
+                            // DIBUJO TÉCNICO I
                             infoContainer.innerHTML = `<iframe src="archivo_tabla_3S_DIBUJO_I.html"></iframe>`;
                         } 
                         else if (materia === "INGLÉS IV") {
@@ -217,29 +215,29 @@
                             
                         } 
                         else if (materia === "FÍSICA III") {
-                            // FÍSICA II
+                            // FÍSICA III
                             infoContainer.innerHTML = `<iframe src="archivo_tabla_FISICA.html"></iframe>`;
                             
                         } 
                         else if (materia === "FÍSICA IV") {
-                            // FÍSICA II
+                            // FÍSICA IV
                             infoContainer.innerHTML = `<iframe src="archivo_tabla_FISICA.html"></iframe>`;
                             
                         } 
                         else if (materia === "CÁLCULO \nINTEGRAL") {
-                            // QUIMICA I
+                            // CALCULO INTEGRAL
                             infoContainer.innerHTML = `<iframe src="archivo_tabla_5S_CALCULO.html"></iframe>`;                        
                         } 
                         else if (materia === "QUÍMICA III") {
-                            // QUIMICA I
+                            // QUIMICA III
                             infoContainer.innerHTML = `<iframe src="archivo_tabla_5S_QUIMICA_III.html"></iframe>`;                        
                         } 
                         else if (materia === "PROBABILIDAD Y \nESTADÍSTICA") {
-                            // QUIMICA I
+                            // PROBABILIDAD Y ESTADISTICA
                             infoContainer.innerHTML = `<iframe src="archivo_tabla_6S_PROB.html"></iframe>`;                        
                         } 
                         else if (materia === "QUÍMICA IV") {
-                            // QUIMICA I
+                            // QUIMICA IV
                             infoContainer.innerHTML = `<iframe src="archivo_tabla_6S_QUIMICA_IV.html"></iframe>`;                        
                         } 
                         else if (materia === "INGLÉS VI") {
@@ -297,7 +295,7 @@
 <ol>
     <li>
         <strong>Propiedad intelectual</strong><br>
-        Esta página web, incluyendo su diseño, código fuente, estructura, funcionalidades y contenido (excepto los logos y marcas registradas), es una obra intelectual creada y desarrollada por <strong>Emilio Calep Vargas Yáñez</strong>. Protegida por la <strong>Ley Federal del Derecho de Autor</strong> en México.
+        Esta página web, incluyendo su diseño, código fuente, estructura, funcionalidades y contenido (excepto los logos y marcas registradas), es una obra intelectual creada y desarrollada por <strong>Emilio Calep Vargas Yáñez</strong>. Protegida por la <strong>Ley Federal del Derecho de Autor</strong> de México en materia de propiedad intelectual.
     </li>
     <li>
         <strong>Cita de imágenes</strong><br>
@@ -313,7 +311,7 @@
         <ul>
             <li>No se modifique, altere o mutile su contenido.</li>
             <li>Se cite de manera explícita y completa la fuente original, incluyendo el nombre de la página y su dirección electrónica.</li>
-            <li>Se respete la autoría y los derechos de propiedad intelectual de su creador haciendo mención del mismo.</li>
+            <li>Se respete la autoría y los derechos de propiedad intelectual de su creador.</li>
             <li>Se cumpla con la normativa vigente del <strong>Instituto Politécnico Nacional (IPN)</strong> en materia de páginas web y vinculación. Para más información, consulta: 
                 <a href="https://www.ipn.mx/vinculaci%C3%B3n/" target="_blank">https://www.ipn.mx/vinculaci%C3%B3n/</a>.
             </li>
@@ -321,7 +319,7 @@
     </li>
     <li>
         <strong>Uso con fines comerciales o institucionales</strong><br>
-        Para cualquier uso que no sea estrictamente no lucrativo, incluyendo su reproducción, modificación o distribución con fines comerciales, se requiere <strong>autorización previa por parte</strong> del titular de los derechos de autor (<strong>Emilio Calep Vargas Yáñez</strong>) y, en su caso, de la <strong>autoridad correspondiente del Instituto Politécnico Nacional (IPN)</strong>.
+        Para cualquier uso que no sea estrictamente no lucrativo, incluyendo su reproducción, modificación o distribución con fines comerciales, educativos o institucionales, se requiere <strong>autorización previa y por escrito</strong> del titular de los derechos de autor (<strong>Emilio Calep Vargas Yáñez</strong>) y, en su caso, del <strong>Director General del Instituto Politécnico Nacional (IPN)</strong>.
     </li>
     <li>
         <strong>Información de los maestros y personal administrativo</strong><br>
@@ -350,8 +348,7 @@
         function mostrarInicio() {
             const infoContainer = document.getElementById('info-container');
             infoContainer.innerHTML = `
-                <h1>Bienvenido a la página de horarios de asesorías</h1>
-                <h4><em>SE RECOMIENDA VER LA PÁGINA WEB EN MODO "SITIO PARA COMPUTADORA"</h4></em>
+                <h2>Bienvenido a la página de horarios de asesorías</h2>
                 <h3>Objetivo</h3>
                 <p>
                     El objetivo de esta página es facilitar a los estudiantes, maestros y personal administrativo del <strong>CECyT 9 "Juan de Dios Bátiz"</strong> el acceso a los horarios de asesorías de manera rápida y organizada. Con esta herramienta, se busca mejorar la comunicación y optimizar el tiempo de todos los miembros de la comunidad educativa.
@@ -371,14 +368,11 @@
                         <strong>Cerrar la vista</strong>: Si deseas regresar al menú principal, haz clic en el botón "Cerrar".
                     </li>
                 </ol>
-                 <p>
-                 En caso de encontrar imprecisiones en la información, se deberá enviar una solicitud de corrección a través del botón correspondiente, el cual redirigirá al correo electrónico designado para este propósito.
-                </p>
             `;
             infoContainer.style.display = 'block'; // Mostrar el contenedor de información
         }
 
-        // Llamada a la función al cargar la página :)
+        // Llamar a la función al cargar la página
         window.onload = mostrarInicio;
     </script>
 </body>
