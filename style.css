@@ -47,9 +47,9 @@ body {
     font-family: "Arial Black", "Arial Bold", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin: 10px 0;  /* Reducí a 15px */
+    margin: -15px 0;  /* Reducí a -15px */
     background-color: #DDDDE2;
-    padding: 8px 15px;  /* Reducí verticalmente (antes 15px) */
+    padding: 8px 15px;
 }
 
 .titulo-principal {
