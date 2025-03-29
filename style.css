@@ -41,6 +41,22 @@ body {
     color: white;
 }
 
+/* Encabezado de nombres */
+.header-nombre {
+    background-color: #800000;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+.left-text {
+   font-weight: bold;
+}
+
+.right-text {
+   color: #555;
+}
+
 /* Contenedor principal flex */
 .container {
     display: flex;
