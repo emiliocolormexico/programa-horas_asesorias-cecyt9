@@ -1,4 +1,4 @@
-/* Estilos generales del body */
+/* Estilos generales (sin cambios) */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -11,7 +11,7 @@ body {
     font-weight: bold;
 }
 
-/* Encabezado central con logos y texto */
+/* Encabezado central (sin cambios) */
 .header-centro-estudios {
     background-color: #DDDDE2;
     padding: 20px;
@@ -25,6 +25,24 @@ body {
     align-items: center;
     gap: 20px;
     text-shadow: 1px 1px 2px rgba(34, 34, 34, 0.5);
+}
+
+/* --- AJUSTES SOLICITADOS --- */
+/* 1. "PROGRAMA HORAS" en guinda (#9E0B0F, color IPN) */
+.titulo-principal {
+    color: #9E0B0F; /* Cambiado a guinda */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 2. "2025-2" en gris (#666666) */
+.subtitulo {
+    color: #666666; /* Cambiado a gris */
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0;
 }
 
 .header-centro-estudios img {
