@@ -55,6 +55,8 @@ body {
 
 .right-text {
    color: #555;
+   text-align: right;
+
 }
 
 /* Contenedor principal flex */
