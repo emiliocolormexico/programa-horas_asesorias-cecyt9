@@ -1,4 +1,4 @@
-/* Estilos generales (sin cambios) */
+/* Estilos generales */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -11,7 +11,7 @@ body {
     font-weight: bold;
 }
 
-/* Encabezado central (sin cambios) */
+/* Encabezado central */
 .header-centro-estudios {
     background-color: #DDDDE2;
     padding: 20px;
@@ -25,24 +25,6 @@ body {
     align-items: center;
     gap: 20px;
     text-shadow: 1px 1px 2px rgba(34, 34, 34, 0.5);
-}
-
-/* --- AJUSTES SOLICITADOS --- */
-/* 1. "PROGRAMA HORAS" en guinda (#9E0B0F, color IPN) */
-.titulo-principal {
-    color: #9E0B0F; /* Cambiado a guinda */
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-/* 2. "2025-2" en gris (#666666) */
-.subtitulo {
-    color: #666666; /* Cambiado a gris */
-    font-size: 18px;
-    font-weight: normal;
-    margin-top: 0;
 }
 
 .header-centro-estudios img {
@@ -59,37 +41,39 @@ body {
     color: white;
 }
 
-/* Estilo para nombre */
+/* Contenedor de PROGRAMA HORAS */
 .encabezado {
     text-align: center;
-    font-family: "Arial Black", "Arial Bold", sans-serif; /* Fuente similar a la institucional */
-    text-transform: uppercase; /* Texto en mayúsculas */
-    letter-spacing: 1px; /* Espaciado entre letras */
+    font-family: "Arial Black", "Arial Bold", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin: 20px 0;
+    background-color: #DDDDE2; /* Fondo gris claro */
+    padding: 15px; /* Controla altura/espaciado */
 }
 
 .titulo-principal {
-    color: #8B1A1A; /* Color guinda (ajusta el código HEX si necesitas otro tono) */
+    color: #9E0B0F; /* Guinda */
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra sutil como en diseños institucionales */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .subtitulo {
-    color: #555555; /* Color gris */
+    color: #666666; /* Gris */
     font-size: 18px;
     font-weight: normal;
     margin-top: 0;
 }
 
-/* Contenedor principal flex */
+/* Contenedor principal */
 .container {
     display: flex;
     flex: 1;
 }
 
-/* Menú de opciones lateral */
+/* Menú lateral */
 .options {
     width: 200px;
     background-color: white;
@@ -97,59 +81,15 @@ body {
     border-right: 2px solid #800000;
 }
 
-/* Botones de semestres rectangulares */
-.semestre-button {
-    display: block;
-    width: 180px;
-    height: 50px;
-    padding: 8px;
-    margin-bottom: 10px;
-    background-color: #800000;
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-size: 14px;
-    transition: filter 0.1s ease;
-    border-radius: 0;
-    white-space: nowrap;
-}
-
-.semestre-button:hover {
-    filter: brightness(1.2);
-}
-
-/* Botón de créditos */
-.creditos-button {
-    display: block;
-    width: 180px;
-    height: 50px;
-    padding: 8px;
-    margin-bottom: 10px;
-    background-color: #666; /* Gris */
-    color: white;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-size: 14px;
-    transition: filter 0.1s ease;
-    border-radius: 0;
-    white-space: nowrap;
-}
-
-.creditos-button:hover {
-    filter: brightness(1.2);
-}
-
-/* Botón de información */
+/* Estilos compartidos para botones */
+.semestre-button,
+.creditos-button,
 .informacion-button {
     display: block;
     width: 180px;
     height: 50px;
     padding: 8px;
     margin-bottom: 10px;
-    background-color: #666; /* Gris */
-    color: white;
     border: none;
     cursor: pointer;
     text-align: center;
@@ -159,11 +99,24 @@ body {
     white-space: nowrap;
 }
 
+.semestre-button {
+    background-color: #800000;
+    color: white;
+}
+
+.creditos-button,
+.informacion-button {
+    background-color: #666;
+    color: white;
+}
+
+.semestre-button:hover,
+.creditos-button:hover,
 .informacion-button:hover {
     filter: brightness(1.2);
 }
 
-/* Contenido principal flex */
+/* Contenido principal */
 .content {
     flex: 1;
     padding: 20px;
@@ -172,7 +125,7 @@ body {
     gap: 20px;
 }
 
-/* Contenedor de semestres ocultos */
+/* Semestres */
 .semester-container {
     display: none;
     flex-direction: column;
@@ -182,7 +135,6 @@ body {
     border-right: 2px solid #800000;
 }
 
-/* Botones de semestres */
 .semester-buttons {
     display: flex;
     flex-direction: column;
@@ -208,7 +160,6 @@ body {
     filter: brightness(1.2);
 }
 
-/* Botón de cerrar */
 .close-button {
     background-color: #800000;
     color: white;
@@ -229,7 +180,7 @@ body {
     filter: brightness(1.2);
 }
 
-/* Contenedor de información oculto */
+/* Información */
 .info-container {
     flex: 1;
     padding: 20px;
@@ -238,7 +189,6 @@ body {
     display: none;
 }
 
-/* Estilos para iframes */
 iframe {
     width: 100%;
     height: 100%;
