@@ -19,6 +19,14 @@
         </a>
     </div>
 
+            <!-- 
+                 DESARRROLLADO POR EMILIO CALEP VARGAS YÁÑEZ
+                 INSTITUCIÓN: CECYT 9 - CUARTO SEMESTRE 
+                 FECHA DE INICIO:      29/03/2025
+                 FECHA DE FINALIZACIÓN 29/03/2025 
+                 ARCHIVOS TOTALES: +8
+            -->
+
     <!-- Contenedor de PROGRAMA HORAS -->
     <div class="encabezado">
         <h1 class="titulo-principal">PROGRAMA HORAS</h1>
@@ -31,26 +39,13 @@
         HORARIOS DE ASESORÍAS PARA<br>MATERIAS DE TÉCNICO EN MECATRÓNICA
     </div>
 
-    <div class="container">
+     <div class="container">
         <div class="options">
-             <!--<button class="semestre-button" onclick="mostrarSemestre(1)">PRIMER SEMESTRE</button>-->
-            <button class="semestre-button" onclick="mostrarSemestre(2)">SEGUNDO SEMESTRE</button>
-             <!--<button class="semestre-button" onclick="mostrarSemestre(3)">TERCER SEMESTRE</button>-->
             <button class="semestre-button" onclick="mostrarSemestre(4)">CUARTO SEMESTRE</button>
-           <!--<button class="semestre-button" onclick="mostrarSemestre(5)">QUINTO SEMESTRE</button>-->
             <button class="semestre-button" onclick="mostrarSemestre(6)">SEXTO SEMESTRE</button>
-            <!-- <button class="semestre-button" onclick="mostrarSemestre(0)">ASESORÍA EN GRUPO</button>-->
             <button class="casa-button" onclick="window.location.href='index.html'">REGRESO A ÁREA BÁSICA Y HUMANÍSTICA</button>            
             
-            <!-- 
-                 DESARRROLLADO POR EMILIO CALEP VARGAS YÁÑEZ
-                 INSTITUCIÓN: CECYT 9 - CUARTO SEMESTRE 
-                 FECHA DE INICIO:      24/03/2025
-                 FECHA DE FINALIZACIÓN 26/03/2025 
-                 ARCHIVOS TOTALES: +23
-            -->
-            
-                 <!-- Botón de quejas y sugerencias -->
+            <!-- Botón de quejas y sugerencias -->
             <button class="creditos-button" onclick="window.location.href='mailto:emiliocolormexico@gmail.com'">Solicitud para cambio<br>de información</button>
             <!-- Botón de información adicional -->
             <button class="creditos-button" onclick="mostrarInformacionAdicional()">Información adicional</button>
@@ -75,231 +70,79 @@
     </div>
 
     <script>
-        const titulos = [
-            "Sin información 1",
-            "Sin información 2",
-            "Sin información 3",
-            "Sin información 4",
-            "Sin información 5",
-            "Sin información 6",
-            "Sin información 7",
-            "Sin información 8",
-            "Sin información 9",
-            "Sin información 0",
-        ];
-
         function mostrarSemestre(semestre) {
             const container = document.getElementById('semester-container');
             const infoContainer = document.getElementById('info-container');
-            container.innerHTML = ''; // Limpiar contenido anterior
-            infoContainer.innerHTML = ''; // Limpiar información anterior
+            container.innerHTML = '';
+            infoContainer.innerHTML = '';
 
-            //  Contenedor para los botones
             const buttonsContainer = document.createElement('div');
             buttonsContainer.className = 'semester-buttons';
 
-            // Función para añadir un espacio cada 2 palabras
             function formatearNombreMateria(nombre) {
                 return nombre.split(' ').map((palabra, index) => 
                     (index > 0 && index % 2 === 0) ? ` ${palabra}` : palabra
                 ).join(' ');
             }
 
-            // Definir las materias para cada semestre
-            const materiasPorSemestre = {
-                1: [
-                    "ÁLGEBRA",
-                    "FILOSOFÍA I",
-                    "COMPUTACIÓN \nBÁSICA I",
-                    "INGLÉS I",
-                    "EXPRESIÓN \nORAL Y \nESCRITA I",
-                    "DESARROLLO \nDE \nHABILIDADES \nDEL \nPENSAMIENTO",
-                    "HISTORIA DE \nMÉXICO \nCONTEMPORÁNEO\n I",
-                    "DESARROLLO \nPERSONAL",
-                    "ORIENTACIÓN \nJUVENIL Y \nPROFESIONAL I"
-                ],
-                2: [
-                    "GEOMETRÍA \nY \nTRIGONOMETRÍA",
-                    "FILOSOFÍA II",
-                    "COMPUTACIÓN \nBÁSICA II",
-                    "INGLÉS II",
-                    "EXPRESIÓN\n ORAL Y \nESCRITA II",
-                    "BIOLOGÍA\n BÁSICA",
-                    "HISTORIA\n DE \nMÉXICO \nCONTEMPORÁNEO\n II",
-                    "ORIENTACIÓN\n JUVENIL Y \nPROFESIONAL\n II",
-                    "TÉCNICAS\n DE \nINVESTIGACIÓN \nDE \nCAMPO"
-                ],
-                3: [
-                    "GEOMETRÍA \nANALÍTICA",
-                    "FÍSICA I",
-                    "QUÍMICA I",
-                    "INGLÉS III",
-                    "COMUNICACIÓN \nCIENTÍFICA",
-                    "DIBUJO\n TÉCNICO I",
-                    "ENTORNO \nSOCIOECONÓMICO \nDE MÉXICO"
-                ],
+            // Materias de Mecatrónica por semestre
+            const materiasMecatronica = {
                 4: [
-                    "CÁLCULO \nDIFERENCIAL",
-                    "FÍSICA II",
-                    "QUIMICA II",
-                    "DIBUJO \nTÉCNICO II",
-                    "INGLÉS IV"
-                ],
-                5: [
-                    "CÁLCULO \nINTEGRAL",
-                    "FÍSICA III",
-                    "QUÍMICA III",
-                    "INGLÉS V",
-                    "ORIENTACIÓN \nJUVENIL Y \nPROFESIONAL III"
+                    "MECANIZADO DE PIEZAS PARA SISTEMAS MECATRÓNICOS"
+                    "LENGUAJE DE PROGRAMACIÓN"
                 ],
                 6: [
-                    "PROBABILIDAD Y \nESTADÍSTICA",
-                    "FÍSICA IV",
-                    "QUÍMICA IV",
-                    "INGLÉS VI",
-                    "ORIENTACIÓN \nJUVENIL Y \nPROFESIONAL IV"
+                    "HERRAMIENTAS COMPUTACIONALES DE VANGUARDIA",
+                    "ELECTRONEUMÁTICA",
+                    "MANUFACTURA AVANZADA",
+                    "ELECTRÓNICA DE POTENCIA",
                 ]
             };
 
-            // Verificar si el semestre tiene materias definidas
-            if (materiasPorSemestre[semestre]) {
-                // Botones con los nombres de las materias formateados
-                materiasPorSemestre[semestre].forEach((materia, index) => {
+            if (materiasMecatronica[semestre]) {
+                materiasMecatronica[semestre].forEach((materia) => {
                     const button = document.createElement('button');
-                    button.innerText = formatearNombreMateria(materia); // Formatear el nombre
+                    button.innerText = formatearNombreMateria(materia);
                     button.onclick = () => {
-                        if (materia === "QUIMICA II") {
-                            // QUIMICA II
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_4S_QUIMICA_II.html"></iframe>`;
-                        } 
-                        else if (materia === "DIBUJO \nTÉCNICO II") {
-                            // DIBUJO TÉCNICO II
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_4S_DIBUJO_II.html"></iframe>`;
-                        } 
-                        else if (materia === "ÁLGEBRA") {
-                            // ÁLGEBRA
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_1S_ALGEBRA.html"></iframe>`;
-                        } 
-                        else if (materia === "GEOMETRÍA \nY \nTRIGONOMETRÍA") {
-                            // ÁLGEBRA
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_2S_GEOMETRIA_TRIGONOMETRIA.html"></iframe>`;
-                        } 
-                        else if (materia === "INGLÉS II") {
-                            // INGLÉS II
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_2S_INGLES_II.html"></iframe>`;
-                        } 
-                        else if (materia === "EXPRESIÓN\n ORAL Y \nESCRITA II") {
-                            // ESPAÑOL II
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_2S_ESPANOL_II.html"></iframe>`;
-                        } 
-                        else if (materia === "HISTORIA\n DE \nMÉXICO \nCONTEMPORÁNEO\n II") {
-                            // HISTORIA II
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_2S_HISTORIA_II.html"></iframe>`;
-                        } 
-                        else if (materia === "TÉCNICAS\n DE \nINVESTIGACIÓN \nDE \nCAMPO") {
-                            // TICS II
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_2S_TICS.html"></iframe>`;
-                        } 
-                        else if (materia === "QUÍMICA I") {
-                            // QUIMICA I
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_3S_QUIMICA_I.html"></iframe>`;                        
-                        } 
-                        else if (materia === "GEOMETRÍA \nANALÍTICA") {
-                            // ANALITICA
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_3S_ANALITICA.html"></iframe>`;                        
-                        } 
-                        else if (materia === "CÁLCULO \nDIFERENCIAL") {
-                            // CALCULO DIFERENCIAL
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_4S_CALCULO.html"></iframe>`;                        
-                        } 
-                        else if (materia === "DIBUJO\n TÉCNICO I") {
-                            // DIBUJO TÉCNICO I
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_3S_DIBUJO_I.html"></iframe>`;
-                        } 
-                        else if (materia === "INGLÉS IV") {
-                            // INGLÉS IV
-                            infoContainer.innerHTML = `<iframe src="INGLES_IV.html"></iframe>`;
-                        } 
-                        else if (materia === "FÍSICA I") {
-                            // FÍSICA I
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_FISICA.html"></iframe>`;
-                        } 
-                        else if (materia === "FÍSICA II") {
-                            // FÍSICA II
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_FISICA.html"></iframe>`;
-                            
-                        } 
-                        else if (materia === "FÍSICA III") {
-                            // FÍSICA IIi
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_FISICA.html"></iframe>`;
-                            
-                        } 
-                        else if (materia === "FÍSICA IV") {
-                            // FÍSICA Iv
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_FISICA.html"></iframe>`;
-                            
-                        } 
-                        else if (materia === "CÁLCULO \nINTEGRAL") {
-                            // CALCULO INTEGRAL
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_5S_CALCULO.html"></iframe>`;                        
-                        } 
-                        else if (materia === "QUÍMICA III") {
-                            // QUIMICA III
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_5S_QUIMICA_III.html"></iframe>`;                        
-                        } 
-                        else if (materia === "PROBABILIDAD Y \nESTADÍSTICA") {
-                            // PROBABILIDAD Y ESTADISTICA
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_6S_PROB.html"></iframe>`;                        
-                        } 
-                        else if (materia === "QUÍMICA IV") {
-                            // QUIMICA IV
-                            infoContainer.innerHTML = `<iframe src="archivo_tabla_6S_QUIMICA_IV.html"></iframe>`;                        
-                        } 
-                        else if (materia === "INGLÉS VI") {
-                            // INGLÉS IV
-                            infoContainer.innerHTML = `<iframe src="INGLES_IV.html"></iframe>`;
-                        } 
-                        else {
-                            // Mostrar información genérica para las otras materias
-                            infoContainer.innerHTML = `
-                                <h2>${formatearNombreMateria(materia)}</h2>
-                                <p>Información detallada sobre ${formatearNombreMateria(materia)} del Semestre ${semestre}.</p>
-                            `;
+                        let archivo = '';
+                        switch(materia) {
+                            case "MECANIZADO DE PIEZAS PARA SISTEMAS MECATRÓNICOS":
+                                archivo = "MECANIZADO_4S.html";
+                                break;
+                            case "HERRAMIENTAS COMPUTACIONALES DE VANGUARDIA":
+                                archivo = "HERRAMIENTAS_6S.html";
+                                break;
+                            case "ELECTRONEUMÁTICA":
+                                archivo = "ELECTRONEUMATICA_6S.html";
+                                break;
+                            case "MANUFACTURA AVANZADA":
+                                archivo = "MANUFACTURA_6S.html";
+                                break;
+                            case "ELECTRÓNICA DE POTENCIA":
+                                archivo = "ELECTRONICA_P_6S.html";
+                                break;
+                            case "LENGUAJE DE PROGRAMACIÓN":
+                                archivo = "LENGUAJE_PROGRAMACION_MECA_4S.html";
+                                break;
                         }
-                        
-                        infoContainer.style.display = 'block'; // Mostrar el contenedor de información
+                        infoContainer.innerHTML = `<iframe src="${archivo}"></iframe>`;
+                        infoContainer.style.display = 'block';
                     };
                     buttonsContainer.appendChild(button);
                 });
-            } else {
-                // Para semestres o opciones sin informacion, mostrar las opciones genéricas (Opción 1, Opción 2, etc.)
-                for (let i = 1; i <= 10; i++) {
-                    const button = document.createElement('button');
-                    button.innerText = `Opción ${i}`;
-                    button.onclick = () => mostrarInformacion(semestre, i);
-                    buttonsContainer.appendChild(button);
-                }
             }
 
-            // botón de cerrar
             const closeButton = document.createElement('button');
             closeButton.innerText = 'Cerrar';
             closeButton.className = 'close-button';
             closeButton.onclick = () => {
-                container.style.display = 'none'; // Ocultar el contenedor del semestre
-                infoContainer.style.display = 'none'; // Ocultar el contenedor de información
+                container.style.display = 'none';
+                infoContainer.style.display = 'none';
             };
 
-            // Agregar botones y botón de cerrar al contenedor
             container.appendChild(buttonsContainer);
             container.appendChild(closeButton);
-
-            // Mostrar el contenedor del semestre
             container.style.display = 'flex';
-        }
-
-        function mostrarCreditos() {
-            alert("Créditos de la página:\n\nDesarrollador: EMILIO CALEP VARGAS YÁÑEZ\nFuente de las imágenes: \nINSTITUTO POLITÉCNICO NACIONAL\nCENTRO DE ESTUDIOS CIENTÍFICOS Y TECNOLÓGICOS NO. 9 JUAN DE DIOS BÁTIZ PAREDES");
         }
 
         // Función para mostrar información adicional en el contenedor de información
