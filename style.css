@@ -41,15 +41,15 @@ body {
     color: white;
 }
 
-/* Contenedor de PROGRAMA HORAS - Versión compacta */
+/* Contenedor de PROGRAMA HORAS - compacto */
 .encabezado {
     text-align: center;
     font-family: "Arial Black", "Arial Bold", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin: -15px 0;  /* Reducí a -15px */
+    margin: 1px 0;  /* Reducí a 1px */
     background-color: #DDDDE2;
-    padding: 8px 15px;
+    padding: 8px 1px;
 }
 
 .titulo-principal {
