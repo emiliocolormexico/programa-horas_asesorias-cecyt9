@@ -41,6 +41,30 @@ body {
     color: white;
 }
 
+/* Estilo para nombre */
+.encabezado {
+    text-align: center;
+    font-family: "Arial Black", "Arial Bold", sans-serif; /* Fuente similar a la institucional */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    margin: 20px 0;
+}
+
+.titulo-principal {
+    color: #8B1A1A; /* Color guinda (ajusta el código HEX si necesitas otro tono) */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Sombra sutil como en diseños institucionales */
+}
+
+.subtitulo {
+    color: #555555; /* Color gris */
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0;
+}
+
 /* Contenedor principal flex */
 .container {
     display: flex;
