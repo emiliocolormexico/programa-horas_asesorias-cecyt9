@@ -41,24 +41,6 @@ body {
     color: white;
 }
 
-/* Encabezado SECUNDARIO (Programa y semestre) */
-.header-programa {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-    background-color: #f0f0f0;
-}
-
-.programa-texto {
-    font-weight: bold;
-}
-
-.semestre-texto {
-    color: #555;
-}
-
 /* Contenedor principal flex */
 .container {
     display: flex;
