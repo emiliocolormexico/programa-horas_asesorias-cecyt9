@@ -226,9 +226,10 @@ iframe {
 /* boton regreso a index */
 .casa-button {
     display: block;
-    width: 180px;
-    height: 50px;
-    padding: 8px;
+    width: 180px;       /* Mismo ancho que otros botones */
+    height: auto;       /* Altura automática para texto multilínea */
+    min-height: 50px;   /* Altura mínima igual a otros botones */
+    padding: 8px 5px;   /* Padding ajustado */
     margin-bottom: 10px;
     border: none;
     cursor: pointer;
@@ -236,9 +237,11 @@ iframe {
     font-size: 14px;
     transition: filter 0.1s ease;
     border-radius: 0;
-    white-space: nowrap;
+    white-space: normal; /* Saltos de línea */
     background-color: #800000; /* Color guinda */
     color: white;
+    word-wrap: break-word;
+    overflow: hidden; /* Para evitar desbordamiento */
 }
 
 .casa-button:hover {
