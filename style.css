@@ -34,11 +34,12 @@ body {
 
 /* Encabezado de horarios */
 .header-horarios {
-    background-color: #800000;
-    padding: 10px;
-    text-align: center;
-    font-size: 18px;
-    color: white;
+   display: flex;
+   justify-content: space-between; 
+   align-items: center; 
+   width: 100%;
+   padding: 10px;
+   background-color: #f0f0f0;
 }
 
 /* Encabezado de nombres */
