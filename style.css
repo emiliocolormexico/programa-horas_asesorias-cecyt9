@@ -49,7 +49,7 @@ body {
     letter-spacing: 1px;
     margin: 20px 0;
     background-color: #DDDDE2; /* Fondo gris claro */
-    padding: 15px; /* Controla altura/espaciado */
+    padding: 10px; /* Controla altura/espaciado */
 }
 
 .titulo-principal {
