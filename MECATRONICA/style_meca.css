@@ -141,6 +141,7 @@ body {
     gap: 10px;
 }
 
+/* Materias de Semestres */
 .semester-buttons button {
     background-color: #003366;
     color: white;
@@ -151,7 +152,7 @@ body {
     font-size: 12px;
     transition: filter 0.1s ease;
     border-radius: 0;
-    width: 100px;
+    width: 120px;
     height: 100px;
     white-space: nowrap;
 }
@@ -160,6 +161,7 @@ body {
     filter: brightness(1.2);
 }
 
+/* boton cerrar */
 .close-button {
     background-color: #666; 
     color: white;
@@ -171,7 +173,7 @@ body {
     transition: filter 0.1s ease;
     border-radius: 0;
     margin-top: 10px;
-    width: 100px;
+    width: 120px;
     height: 40px;
     white-space: nowrap;
 }
