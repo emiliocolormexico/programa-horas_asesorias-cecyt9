@@ -158,8 +158,6 @@ body {
 
 .semester-buttons button:hover {
     filter: brightness(1.2);
-    transform: translateY(-2px); /* Efecto de elevación */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .close-button {
@@ -180,8 +178,6 @@ body {
 
 .close-button:hover {
     filter: brightness(1.2);
-    transform: translateY(-2px); /* Efecto de elevación */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Información */
