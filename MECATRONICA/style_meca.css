@@ -151,7 +151,7 @@ body {
     font-size: 12px;
     transition: filter 0.1s ease;
     border-radius: 0;
-    width: 100px;
+    width: 150px; /* ancho de boton de materias de semestre */
     height: 100px;
     white-space: nowrap;
 }
@@ -174,7 +174,7 @@ body {
     transition: filter 0.1s ease;
     border-radius: 0;
     margin-top: 10px;
-    width: 100px; /* ancho */
+    width: 150px; /* ancho de boton de cerrar */
     height: 40px;
     white-space: nowrap;
 }
