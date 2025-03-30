@@ -125,60 +125,77 @@ body {
     gap: 20px;
 }
 
-/* Semestres */
+/*///////////////////////////////////////////
+
+/* Semestres - Contenedor principal */
 .semester-container {
     display: none;
     flex-direction: column;
-    width: 140px;
+    width: 280px; /* Aumentado considerablemente */
     background-color: white;
-    padding: 15px;
+    padding: 20px;
     border-right: 2px solid #003366;
 }
 
+/* Contenedor de botones de materias */
 .semester-buttons {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px; /* Más espacio entre botones */
 }
 
+/* Estilo para los botones de materias */
 .semester-buttons button {
     background-color: #003366;
     color: white;
     border: none;
-    padding: 8px;
+    padding: 12px 8px; /* Más padding vertical */
     cursor: pointer;
     text-align: center;
-    font-size: 12px;
-    transition: filter 0.1s ease;
-    border-radius: 0;
-    width: 100px;
-    height: 100px;
-    white-space: nowrap;
+    font-size: 14px; /* Tamaño de fuente ligeramente mayor */
+    transition: all 0.2s ease;
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    width: 240px; /* Ancho significativamente mayor */
+    min-height: 100px; /* Altura mínima */
+    white-space: normal; /* Permite saltos de línea */
+    word-wrap: break-word; /* Rompe palabras largas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4; /* Mejor espaciado entre líneas */
 }
 
+/* Efecto hover para los botones */
 .semester-buttons button:hover {
-    filter: brightness(1.2);
+    background-color: #004080;
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Botón de cerrar - más ancho y consistente */
 .close-button {
-    background-color: #666; 
+    background-color: #666;
     color: white;
     border: none;
-    padding: 8px;
+    padding: 12px;
     cursor: pointer;
     text-align: center;
-    font-size: 12px;
-    transition: filter 0.1s ease;
-    border-radius: 0;
-    margin-top: 10px;
-    width: 100px;
-    height: 40px;
-    white-space: nowrap;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    margin-top: 20px;
+    width: 240px; /* Mismo ancho que los botones de materias */
+    height: 50px;
+    white-space: normal;
 }
 
 .close-button:hover {
-    filter: brightness(1.2);
+    background-color: #777;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/*///////////////////////////////////////////
 
 /* Información */
 .info-container {
