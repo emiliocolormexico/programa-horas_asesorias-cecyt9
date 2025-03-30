@@ -116,33 +116,29 @@ body {
     filter: brightness(1.2);
 }
 
-/* Contenedor principal ajustado */
+/* Contenido principal */
 .content {
     flex: 1;
     padding: 20px;
     background-color: white;
     display: flex;
     gap: 20px;
-    min-width: 0; /* Añade esto para evitar desbordamiento */
 }
 
-/* Semestres - Contenedor ajustado */
+/* Semestres */
 .semester-container {
     display: none;
     flex-direction: column;
-    width: 200px; /* Aumentado de 140px */
+    width: 140px;
     background-color: white;
     padding: 15px;
     border-right: 2px solid #003366;
-    min-width: 0; /* Importante para flexbox */
 }
 
-/* Botones de materias corregidos */
 .semester-buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 100%; /* Ocupa todo el ancho disponible */
 }
 
 .semester-buttons button {
@@ -153,37 +149,38 @@ body {
     cursor: pointer;
     text-align: center;
     font-size: 12px;
-    transition: all 0.2s ease;
+    transition: filter 0.1s ease;
     border-radius: 0;
-    width: 100%; /* Ahora ocupa el 100% del contenedor */
-    min-height: 100px;
-    white-space: normal; /* Cambiado de nowrap a normal */
-    word-wrap: break-word; /* Permite romper palabras largas */
-    overflow: hidden; /* Evita desbordamiento */
-    box-sizing: border-box; /* Incluye padding en el ancho */
+    width: 100px;
+    height: 100px;
+    white-space: nowrap;
 }
 
-/* Botón cerrar ajustado */
+.semester-buttons button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .close-button {
-    background-color: #666;
+    background-color: #666; 
     color: white;
     border: none;
     padding: 8px;
     cursor: pointer;
     text-align: center;
     font-size: 12px;
-    transition: all 0.2s ease;
+    transition: filter 0.1s ease;
     border-radius: 0;
     margin-top: 10px;
-    width: 100%; /* Mismo ancho que los demás botones */
+    width: 100px;
     height: 40px;
-    white-space: normal;
-    box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .close-button:hover {
-    background-color: #777;
-    transform: translateY(-2px);
+    filter: brightness(1.2);
+    transform: translateY(-2px); /* Efecto de elevación */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
