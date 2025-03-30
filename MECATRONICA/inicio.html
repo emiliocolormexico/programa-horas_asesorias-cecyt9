@@ -80,8 +80,9 @@
             const materiasMecatronica = {
                 4: [
                     "MECANIZADO \nDE PIEZAS PARA \nSISTEMAS \nMECATRÓNICOS",
-                    "LENGUAJE DE \nPROGRAMACIÓN",
-                    "MANUFACTURA \nAVANZADA"
+                    "LENGUAJE DE \nPROGRAMACIÓN"
+                    "MANUFACTURA \nAVANZADA",
+
                 ],
                 6: [
                     "HERRAMIENTAS \nCOMPUTACIONALES\n DE VANGUARDIA",
@@ -94,53 +95,30 @@
                 materiasMecatronica[semestre].forEach((materia) => {
                     const button = document.createElement('button');
                     button.innerText = formatearNombreMateria(materia);
-                    button.onclick = async () => {
+                    button.onclick = () => {
                         let archivo = '';
-                        
-                        // Mejorado para manejar los nombres con \n
-                        if (materia.includes("MECANIZADO")) {
-                            archivo = "MECANIZADO_4S.html";
-                        } else if (materia.includes("HERRAMIENTAS")) {
-                            archivo = "HERRAMIENTAS_6S.html";
-                        } else if (materia.includes("ELECTRO") && materia.includes("NEUMÁTICA")) {
-                            archivo = "ELECTRONEUMATICA_6S.html";
-                        } else if (materia.includes("MANUFACTURA")) {
-                            archivo = "MANUFACTURA_4S.html";
-                        } else if (materia.includes("ELECTRÓNICA") && materia.includes("POTENCIA")) {
-                            archivo = "ELECTRONICA_P_6S.html";
-                        } else if (materia.includes("LENGUAJE") && materia.includes("PROGRAMACIÓN")) {
-                            archivo = "LENGUAJE_PROGRAMACION_MECA_4S.html";
+                        switch(materia) {
+                            case "MECANIZADO \nDE PIEZAS PARA \nSISTEMAS \nMECATRÓNICOS":
+                                archivo = "MECANIZADO_4S.html";
+                                break;
+                            case "HERRAMIENTAS \nCOMPUTACIONALES\n DE VANGUARDIA":
+                                archivo = "HERRAMIENTAS_6S.html";
+                                break;
+                            case "ELECTRO\nNEUMÁTICA":
+                                archivo = "ELECTRONEUMATICA_6S.html";
+                                break;
+                            case "MANUFACTURA \nAVANZADA":
+                                archivo = "MANUFACTURA_4S.html";
+                                break;
+                            case "ELECTRÓNICA \nDE POTENCIA":
+                                archivo = "ELECTRONICA_P_6S.html";
+                                break;
+                            case "LENGUAJE DE \nPROGRAMACIÓN":
+                                archivo = "LENGUAJE_PROGRAMACION_MECA_4S.html";
+                                break;
                         }
-
                         if (archivo) {
-                            try {
-                                const response = await fetch(archivo);
-                                if (!response.ok) {
-                                    throw new Error(`Archivo ${archivo} no encontrado (${response.status})`);
-                                }
-                                const html = await response.text();
-                                infoContainer.innerHTML = html;
-                                infoContainer.style.display = 'block';
-                            } catch (error) {
-                                console.error('Error al cargar el archivo:', error);
-                                infoContainer.innerHTML = `
-                                    <div class="error-message">
-                                        <h3>Error al cargar la información</h3>
-                                        <p>No se pudo cargar el archivo: ${archivo}</p>
-                                        <p>${error.message}</p>
-                                        <p>Por favor, reporte este problema usando el botón "Solicitud para cambio de información".</p>
-                                    </div>
-                                `;
-                                infoContainer.style.display = 'block';
-                            }
-                        } else {
-                            infoContainer.innerHTML = `
-                                <div class="error-message">
-                                    <h3>Materia no configurada</h3>
-                                    <p>No se encontró una página asociada para esta materia.</p>
-                                    <p>Por favor, reporte este problema usando el botón "Solicitud para cambio de información".</p>
-                                </div>
-                            `;
+                            infoContainer.innerHTML = `<iframe src="${archivo}"></iframe>`;
                             infoContainer.style.display = 'block';
                         }
                     };
