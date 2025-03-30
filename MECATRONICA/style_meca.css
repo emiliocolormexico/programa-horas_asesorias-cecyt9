@@ -127,11 +127,11 @@ body {
 
 /*///////////////////////////////////////////
 
-/* Semestres - Contenedor principal */
+/* Semestres - contenedor principal */
 .semester-container {
     display: none;
     flex-direction: column;
-    width: 280px; /* Aumentado considerablemente */
+    width: 280px; /* Aumento */
     background-color: white;
     padding: 20px;
     border-right: 2px solid #003366;
@@ -141,7 +141,7 @@ body {
 .semester-buttons {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Más espacio entre botones */
+    gap: 10px;
 }
 
 /* Estilo para los botones de materias */
@@ -152,17 +152,14 @@ body {
     padding: 12px 8px; /* Más padding vertical */
     cursor: pointer;
     text-align: center;
-    font-size: 14px; /* Tamaño de fuente ligeramente mayor */
+    font-size: 12px;
     transition: all 0.2s ease;
-    border-radius: 4px; /* Bordes ligeramente redondeados */
-    width: 240px; /* Ancho significativamente mayor */
-    min-height: 100px; /* Altura mínima */
-    white-space: normal; /* Permite saltos de línea */
+    width: 150px; /* Ancho significativamente mayor */
+    white-space: nowrap; /* tambien puede ser "normal" */
     word-wrap: break-word; /* Rompe palabras largas */
     display: flex;
     align-items: center;
     justify-content: center;
-    line-height: 1.4; /* Mejor espaciado entre líneas */
 }
 
 /* Efecto hover para los botones */
